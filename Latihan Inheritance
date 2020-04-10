@@ -1,0 +1,58 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace tugas4
+{
+    class Program
+    {
+        public class Person
+        {
+            public string nama { get; get; }
+            public int age { get; get; }
+            public void GetNameAndAge()
+            {
+                Console.WriteLine("The Person has Name :{0} and Age : {1}", nama, age)
+            }
+        }
+        public class Teacher : Person
+        {
+            public string teacherid { get; get; }
+            public string subjact { get; get; }
+        }
+        public class Students : Teacher
+        {
+            public class studentid { get;get;}
+            public class email { get;get;}
+        }
+        static void Main(string[] args)
+        {
+            Person person = new Person();
+            person.nama = "akbar";
+            person.age = "19";
+            person.GetNameAndAge();
+
+            Teacher teacher = new Teacher();
+            teacher.nama = "Kamarudin";
+            teacher.age = "35";
+            teacher.teacherid = "190302";
+            teacher.subjact = "Pemrograman";
+            teacher.GetNameAndAge();
+
+            Students student = new Students();
+            student.nama = "Akbar Nurrizky";
+            student.age = "19";
+            student.studentid = "19 11 2615";
+            student.email = "akbar.nurrizky@students.amikom.ac.id";
+            student.GetNameAndAge();
+
+            Console.ReadKey();
+
+
+
+        }
+
+    }
+}
